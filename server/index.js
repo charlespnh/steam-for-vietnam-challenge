@@ -5,10 +5,13 @@ const PORT = 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
-app.get("/ping", (req, res) => {
-  res.send("Pong!");
-});
+app.use((req, res, next) => {       // middleware session logger
+    console.log(req.method + " request to " + req.url);
+    // console.log("Params: " + JSON.stringify(req.params));
+    // console.log("Body: " + JSON.stringify(req.body))
+    console.log("Status " + res.statusCode + " - " + res.statusMessage);
+    next();
+})
 
 app.use("/users", require("./routes/users"));
 app.use("/posts", require("./routes/posts"));
