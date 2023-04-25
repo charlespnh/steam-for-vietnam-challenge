@@ -3,6 +3,8 @@ const app = express();
 
 const PORT = 3000; 
 
+app.use('/v1', require("./routes/v1"));
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use((req, res, next) => {       // middleware session logger
@@ -12,9 +14,6 @@ app.use((req, res, next) => {       // middleware session logger
     console.log("Status " + res.statusCode + " - " + res.statusMessage);
     next();
 })
-
-app.use("/users", require("./routes/users"));
-app.use("/posts", require("./routes/posts"));
 
 app.listen(PORT, () => console.log(`Server started in port ${PORT}`));
 module.exports = app;
