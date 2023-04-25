@@ -1,0 +1,25 @@
+{
+  "name": "steam-for-vietnam",
+  "version": "1.0.0",
+  "description": "My version of STEAM for Vietnam's summer 2023 challenge",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charlespnh/steam-for-vietnam-challenge.git"
+  },
+  "author": "Charles Nguyen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/charlespnh/steam-for-vietnam-challenge/issues"
+  },
+  "homepage": "https://github.com/charlespnh/steam-for-vietnam-challenge#readme",
+  "dependencies": {
+    "jest": "^29.5.0",
+    "joi": "^17.9.2",
+    "node-fetch": "^3.3.1"
+  }
+}
