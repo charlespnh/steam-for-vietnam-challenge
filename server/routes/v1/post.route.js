@@ -23,7 +23,7 @@ router
                 res.status(httpStatus.OK).json(post);
             })
             .catch(err => res.status(err.code).send(err.message));
-    })
+    });
 
 router
     .route('/:postId/comments')
@@ -34,9 +34,9 @@ router
                 res.status(httpStatus.OK).json(comments);
             })
             .catch(err => res.status(err.code).send(err.message));
-    })
+    });
 
-    router
+router
     .route('/:postId/comments/:commentId')
     .get(async (req, res) =>  {
         fetch(`https://jsonplaceholder.typicode.com/posts/${req.params.postId}/comments/${req.params.commentId}`)
@@ -45,6 +45,6 @@ router
                 res.status(httpStatus.OK).json(comment);
             })
             .catch(err => res.status(err.code).send(err.message));
-    })
+    });
 
 module.exports = router;
