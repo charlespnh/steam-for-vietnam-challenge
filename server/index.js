@@ -15,5 +15,10 @@ app.use((req, res, next) => {       // middleware session logger
     next();
 })
 
+app.use('/ping', (req, res, next) => {
+    res.send('Pong');
+    next();
+});
+
 app.listen(PORT, () => console.log(`Server started in port ${PORT}`));
 module.exports = app;
