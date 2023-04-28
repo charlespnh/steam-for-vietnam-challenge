@@ -23,8 +23,11 @@ npm start
 ```
 
 ## Design
-The application focuses more on backend rather than frontend, where:
-- `Node` and its `Express` framework is used
+### Frontend
+- `React`
+
+### Backend
+- `Node` and its `Express` framework
 - API versioning is followed, as all development process should
 - Modular design is leveraged so that application can scale up in terms of codes and design easily without having to heavily refactor later on. The entire challenge can be done with just `React` client side and `fetch`, but potentially leads to large refactorig process should we add more features and require database.
 
