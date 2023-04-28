@@ -36,15 +36,7 @@ router
             .catch(err => res.status(err.code).send(err.message));
     });
 
-router
-    .route('/:postId/comments/:commentId')
-    .get(async (req, res) =>  {
-        fetch(`https://jsonplaceholder.typicode.com/posts/${req.params.postId}/comments/${req.params.commentId}`)
-            .then(data => data.json())
-            .then(comment => {
-                res.status(httpStatus.OK).json(comment);
-            })
-            .catch(err => res.status(err.code).send(err.message));
-    });
+// router
+//     .route('/:postId/comments/:commentId') ???
 
 module.exports = router;
